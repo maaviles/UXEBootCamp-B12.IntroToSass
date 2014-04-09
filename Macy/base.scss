@@ -125,6 +125,7 @@ nav {
 }
 
 // Interpolation and if/else loops
+// Other Control directives @if, @for, @each and @while
 // * ======================================
 
 @mixin color_class($color) {
@@ -158,3 +159,52 @@ nav {
   @include randoMix(10px);
 }
 
+// more examples
+
+$boolean: true !default;
+
+@mixin simple {
+  @if $boolean {
+    @debug "boolean is #{$boolean}";
+    display: block;
+  }
+  @else {
+    @debug "boolean is #{$boolean}";
+    display: none;
+  }
+}
+
+.meep {
+  @include simple;
+}
+
+// @for example
+
+$moop: for;
+
+// I take variable i and go from 1 all the way through 50
+@for $i from 1 through 50 {
+  .#{$moop}-#{$i} {
+    width: 60px + $i;
+  }
+}
+
+// omg you can build useless gradients! pretty cool though. who the hell knew about the color whitesmoke...
+.box {
+  width: 100%;
+  height: 20px;
+}
+
+$exColor: white;
+
+@for $i from 1 through 11 {
+  .box:nth-child(#{$i}) {
+    background: darken($exColor, $i);
+  }
+}
+
+
+// Handy tips
+// * ======================================
+
+// use the @debug and @warn to print messages to the console. this can come in handy for complex mixins and functions
