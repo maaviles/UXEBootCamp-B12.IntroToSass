@@ -1,0 +1,33 @@
+/* you have to use css comments for your comment to show in the .css file */
+main {
+  background: tomato;
+  font-family: "Trebuchet MS", sans-serif; }
+  main > h1 {
+    font-size: 3em;
+    color: whitesmoke; }
+
+.entry p {
+  background-color: darkblue;
+  color: whitesmoke; }
+.entry h1 {
+  font-size: 1.5em;
+  color: darkblue; }
+.entry a {
+  color: tomato; }
+
+.box {
+  border-radius: .25em;
+  border-color: black;
+  border-top-right-radius: 1em;
+  border-bottom-left-radius: 1em; }
+  .box a {
+    color: green; }
+    .box a:hover {
+      color: whitesmoke; }
+
+button {
+  border-radius: .25em;
+  border-color: black;
+  border-top-right-radius: 1em;
+  border-bottom-left-radius: 1em;
+  background: whitesmoke; }
