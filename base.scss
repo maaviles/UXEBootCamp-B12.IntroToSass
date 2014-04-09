@@ -64,7 +64,7 @@ main {
 
 @mixin cheese {
   border-radius: .25em;
-  border-color: black;
+  border-color: $secondcolor;
   border-top-right-radius: 1em;
   border-bottom-left-radius: 1em;
 }
