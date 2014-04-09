@@ -46,6 +46,8 @@ main {
 }
 
 .entry{
+  width: 75%;
+  margin: 0 auto;
   p {
     background-color: $secondcolor;
     color: $maincolor;
@@ -62,16 +64,16 @@ main {
 // Basic Mixins
 // * ======================================
 
-@mixin cheese {
-  border-radius: .25em;
+@mixin cheese($radius-one, $radius-two) {
+  border-radius: $radius-one;
   border-color: $secondcolor;
-  border-top-right-radius: 1em;
-  border-bottom-left-radius: 1em;
+  border-top-right-radius: $radius-two;
+  border-bottom-left-radius: $radius-two;
 }
 
-@mixin green-links {
+@mixin green-links($color) {
   a {
-    color: green;
+    color: $color;
     &:hover {
       color: $maincolor;
     }
@@ -79,12 +81,12 @@ main {
 }
 
 .box {
-  @include cheese;
-  @include green-links;
+  @include cheese(.1em, .4em);
+  @include green-links(green);
 }
 
 button {
-  @include cheese;
+  @include cheese(.3em, .2em);
   background: $maincolor;
 }
 

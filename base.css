@@ -6,28 +6,31 @@ main {
     font-size: 3em;
     color: whitesmoke; }
 
-.entry p {
-  background-color: darkblue;
-  color: whitesmoke; }
-.entry h1 {
-  font-size: 1.5em;
-  color: darkblue; }
-.entry a {
-  color: tomato; }
+.entry {
+  width: 75%;
+  margin: 0 auto; }
+  .entry p {
+    background-color: darkblue;
+    color: whitesmoke; }
+  .entry h1 {
+    font-size: 1.5em;
+    color: darkblue; }
+  .entry a {
+    color: tomato; }
 
 .box {
-  border-radius: .25em;
+  border-radius: 0.1em;
   border-color: darkblue;
-  border-top-right-radius: 1em;
-  border-bottom-left-radius: 1em; }
+  border-top-right-radius: 0.4em;
+  border-bottom-left-radius: 0.4em; }
   .box a {
     color: green; }
     .box a:hover {
       color: whitesmoke; }
 
 button {
-  border-radius: .25em;
+  border-radius: 0.3em;
   border-color: darkblue;
-  border-top-right-radius: 1em;
-  border-bottom-left-radius: 1em;
+  border-top-right-radius: 0.2em;
+  border-bottom-left-radius: 0.2em;
   background: whitesmoke; }
