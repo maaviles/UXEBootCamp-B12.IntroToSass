@@ -71,17 +71,16 @@ main {
   border-bottom-left-radius: $radius-two;
 }
 
-@mixin color-links($a-color) {
+@mixin color-links($color) {
   a {
-    color: $a-color;
+    color: $color;
     &:hover {
       color: $maincolor;
     }
   }
 }
 
-aside {
-  margin: 0 auto;
+.box {
   @include cheese(.1em, .4em);
   @include color-links(green);
 }
@@ -91,70 +90,19 @@ button {
   background: $maincolor;
 }
 
-// @extend - like mixins but you can't pass arguments!
+// @extend
 // * ======================================
 
-%bar {
-  height: 20px;
+.bar {
+  height: 14px;
   width: 100%;
   > div {
     float: left;
   }
 }
 
-nav {
-  @extend %bar;
+.menu {
+  @extend .bar;
   background-color: $maincolor;
-}
-
-// @functions - like mixins except functions will return a value! yay math!
-// ** Use functions when you need to calculate a value that may be reused somewhere else **
-// * ======================================
-
-@function my-calc($some-number, $another-number){
-  @return $some-number + $another-number
-}
-
-@function calc-perc($target, $container) {
-  @return ($target / $container) * 100%;
-}
-
-.module {
-  padding: my-calc(5px, 10px);
-  width: calc-perc(400px, 700px);
-}
-
-// Interpolation and if/else loops
-// * ======================================
-
-@mixin color_class($color) {
-  .#{$color} {
-    color: $color;
-    background: url("images/#{$color}.jpg") no-repeat;
-    @if $color == red {
-      border: 1px solid black;
-    }
-  }
-}
-
-@mixin randoMix($width) {
-  @if $width > 100px {
-    padding: 0px;
-  }
-  @else {
-    padding: 20px;
-  }
-}
-
-@include color_class(blue);
-@include color_class(red);
-@include color_class(yellow);
-@include color_class(green);
-
-.block {
-  @include randoMix(200px);
-}
-.div {
-  @include randoMix(10px);
 }
 

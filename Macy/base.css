@@ -18,14 +18,15 @@ main {
   .entry a {
     color: tomato; }
 
-.box {
+aside {
+  margin: 0 auto;
   border-radius: 0.1em;
   border-color: darkblue;
   border-top-right-radius: 0.4em;
   border-bottom-left-radius: 0.4em; }
-  .box a {
+  aside a {
     color: green; }
-    .box a:hover {
+    aside a:hover {
       color: whitesmoke; }
 
 button {
@@ -34,3 +35,39 @@ button {
   border-top-right-radius: 0.2em;
   border-bottom-left-radius: 0.2em;
   background: whitesmoke; }
+
+nav {
+  height: 20px;
+  width: 100%; }
+  nav > div {
+    float: left; }
+
+nav {
+  background-color: whitesmoke; }
+
+.module {
+  padding: 15px;
+  width: 57.14286%; }
+
+.blue {
+  color: blue;
+  background: url("images/blue.jpg") no-repeat; }
+
+.red {
+  color: red;
+  background: url("images/red.jpg") no-repeat;
+  border: 1px solid black; }
+
+.yellow {
+  color: yellow;
+  background: url("images/yellow.jpg") no-repeat; }
+
+.green {
+  color: green;
+  background: url("images/green.jpg") no-repeat; }
+
+.block {
+  padding: 0px; }
+
+.div {
+  padding: 20px; }
